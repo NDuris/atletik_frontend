@@ -1,0 +1,46 @@
+/* App.css */
+
+.app {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.title-banner {
+  background-color: #333;
+  color: #fff;
+  padding: 1rem;
+  text-align: center;
+}
+
+.content {
+  display: flex;
+  flex: 1; /* Flex 1 for at tage resten af pladsen i .app */
+}
+
+.sidebar {
+  background-color: #f0f0f0;
+  width: 200px;
+  flex: 0 0 200px; /* Holder sidebar fastbredde */
+}
+
+.sidebar nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0; /* Fjerner default margin */
+}
+
+.sidebar nav li {
+  margin-bottom: 0.5rem;
+  font-size: 25px; /* Ændrer fontstørrelsen til 25px */
+}
+
+.main-view {
+  flex: 1; /* Flex 1 for at tage resten af pladsen ved siden af sidebar */
+  padding: 1rem;
+  overflow-y: auto;
+}
+
+.main-view h2 {
+  font-size: 40px; /* Ændrer størrelsen på h2 titler i main view */
+}

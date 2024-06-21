@@ -1,0 +1,49 @@
+/* src/styles/ResultatListe.css */
+
+.resultat-list-container {
+    margin: 20px;
+  }
+  
+  .list-title {
+    font-size: 2em;
+    margin-bottom: 20px;
+  }
+  
+  .search-bar {
+    margin-bottom: 20px;
+  }
+  
+  .table th {
+    cursor: pointer;
+  }
+  
+  .table th:hover {
+    background-color: #f1f1f1;
+  }
+  
+  .table tbody tr:hover {
+    background-color: #f9f9f9;
+  }
+  
+  .table .btn {
+    margin-right: 5px;
+  }
+  
+  /* Modal Styling */
+  .modal-header {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  .modal-title {
+    font-size: 1.5em;
+  }
+  
+  .modal-body {
+    padding: 20px;
+  }
+  
+  .modal-footer .btn {
+    min-width: 100px;
+  }
+  
