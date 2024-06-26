@@ -16,7 +16,7 @@ const ResultatListe: React.FC = () => {
   const [editingResultatId, setEditingResultatId] = useState<number | null>(null);
   const [deleteConfirmationId, setDeleteConfirmationId] = useState<number | null>(null);
   const [editingValue, setEditingValue] = useState<string>('');
-  const [showAddModal, setShowAddModal] = useState<boolean>(false);
+  const [showAddModal, setShowAddModal] = useState<boolean>(false);1
   const [showAddEventModal, setShowAddEventModal] = useState<boolean>(false);
   const [selectedDeltager, setSelectedDeltager] = useState<string>('');
   const [selectedDisciplin, setSelectedDisciplin] = useState<string>('');

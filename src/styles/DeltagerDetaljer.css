@@ -1,59 +1,57 @@
-/* DeltagerDetaljer.css */
-
 .deltager-detaljer-container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    background-color: #f8f9fa;
-  }
-  
-  .deltager-info {
-    margin-bottom: 20px;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    background-color: #fff;
-  }
-  
-  .deltager-info h2 {
-    font-size: 24px;
-    margin-bottom: 10px;
-  }
-  
-  .deltager-info p {
-    font-size: 16px;
-    margin-bottom: 5px;
-  }
-  
-  .resultater-liste {
-    margin-top: 20px;
-  }
-  
-  .resultat-item {
-    margin-bottom: 10px;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    background-color: #fff;
-  }
-  
-  .resultat-item p {
-    font-size: 16px;
-    margin-bottom: 5px;
-  }
-  
-  .resultat-item .dato {
-    font-weight: bold;
-  }
-  
-  .resultat-item .disciplin {
-    font-style: italic;
-  }
-  
-  .resultat-item .resultatvaerdi {
-    font-weight: bold;
-    color: #007bff; /* Blue color for resultatvaerdi */
-  }
-  
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f8f9fa;
+}
+
+.deltager-info {
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: #fff;
+}
+
+.deltager-info h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.deltager-info p {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.resultater-liste {
+  margin-top: 20px;
+}
+
+.resultat-item {
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: #fff;
+}
+
+.resultat-item p {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.resultat-item .label {
+  font-weight: bold;
+}
+
+.resultat-item .dato,
+.resultat-item .disciplin,
+.resultat-item .resultatvaerdi {
+  font-weight: normal;
+}
+
+.resultat-item .resultatvaerdi {
+  color: #007bff; /* Blue color for resultatvaerdi */
+}

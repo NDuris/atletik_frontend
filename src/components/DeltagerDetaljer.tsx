@@ -39,35 +39,29 @@ const DeltagerDetaljer: React.FC<DeltagerDetaljerProps> = (props) => {
   };
 
   if (loading) {
-    return <p>Loading...</p>; // Viser en loading-indikator så længe dataen hentes
+    return <p>Loading...</p>; // Display a loading indicator while data is being fetched
   }
 
   return (
     <div className="deltager-detaljer-container">
       {Object.keys(deltager).length > 0 ? (
         <>
-          <h2>{deltager.data.navn}</h2>
-          <p>Køn: {deltager.data.koen}</p>
-          <p>Alder: {deltager.data.alder}</p>
+          <div className="deltager-info">
+            <h2>{deltager.data.navn}</h2>
+            <p>Køn: {deltager.data.koen}</p>
+            <p>Alder: {deltager.data.alder}</p>
+          </div>
 
           <h3>Resultater</h3>
-          <table>
-            <thead>
-              <tr>
-                <th>Dato</th>
-                <th>Resultat</th>
-                <th>Disciplin</th>
-              </tr>
-            </thead>
-            <tbody>
-              {resultater.map(resultat => (
-                <tr key={resultat.id}>
-                  <td>{resultat.dato}</td>
-                  <td>{resultat.resultatvaerdi}</td>
-                </tr>
-              ))}
-            </tbody>  
-          </table>
+          <div className="resultater-liste">
+            {resultater.map(resultat => (
+              <div className="resultat-item" key={resultat.id}>
+              <p className="label">Dato: <span className="dato">{resultat.dato}</span></p>
+              <p className="label">Disciplin: <span className="disciplin">{resultat.disciplinNavn}</span></p>
+              <p className="label">Resultat: <span className="resultatvaerdi">{resultat.resultatvaerdi}</span></p>
+            </div>
+            ))}
+          </div>
 
           <Link to={`/deltagere/${id}/rediger`}>Rediger deltager</Link>
         </>
