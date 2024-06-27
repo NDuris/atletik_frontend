@@ -55,3 +55,27 @@
 .resultat-item .resultatvaerdi {
   color: #007bff; /* Blue color for resultatvaerdi */
 }
+
+.action-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.action-buttons a {
+  text-decoration: none;
+  color: #007bff;
+  padding: 10px;
+  border: 1px solid #007bff;
+  border-radius: 4px;
+  background-color: #f8f9fa;
+}
+
+.action-buttons button {
+  padding: 10px;
+  border: 1px solid #dc3545;
+  border-radius: 4px;
+  background-color: #dc3545;
+  color: #fff;
+  cursor: pointer;
+}

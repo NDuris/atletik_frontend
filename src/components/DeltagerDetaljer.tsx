@@ -1,7 +1,7 @@
 // DeltagerDetaljer.tsx
 
 import React, { useState, useEffect } from 'react';
-import { Link, useParams } from 'react-router-dom';
+import { Link, useParams, useNavigate } from 'react-router-dom';
 import ApiService from '../services/ApiService';
 import '../styles/DeltagerDetaljer.css';
 
@@ -14,6 +14,8 @@ const DeltagerDetaljer: React.FC<DeltagerDetaljerProps> = (props) => {
   const [deltager, setDeltager] = useState<any>({});
   const [resultater, setResultater] = useState<any[]>([]);
   const [loading, setLoading] = useState(true); // State til at styre indlæsningstilstand
+  const navigate = useNavigate(); // Brug useNavigate til at navigere
+
 
   useEffect(() => {
     fetchData();
@@ -34,6 +36,17 @@ const DeltagerDetaljer: React.FC<DeltagerDetaljerProps> = (props) => {
       } catch (error) {
         console.error('Error fetching data:', error);
         setLoading(false); // Hvis der opstår en fejl, skal loading også sættes til false
+      }
+    }
+  };
+
+  const handleDelete = async () => {
+    if (id) {
+      try {
+        await ApiService.deleteDeltager(parseInt(id));
+        navigate('/deltagere'); // Naviger til deltageroversigten efter sletning
+      } catch (error) {
+        console.error('Error deleting participant:', error);
       }
     }
   };
@@ -63,7 +76,10 @@ const DeltagerDetaljer: React.FC<DeltagerDetaljerProps> = (props) => {
             ))}
           </div>
 
-          <Link to={`/deltagere/${id}/rediger`}>Rediger deltager</Link>
+          <div className="action-buttons">
+            <Link to={`/deltagere/${id}/rediger`}>Rediger deltager</Link>
+            <button onClick={handleDelete}>Slet deltager</button> {/* Tilføj slet-knap */}
+          </div>
         </>
       ) : (
         <p>Noget gik galt. Kunne ikke indlæse deltageroplysninger.</p>
